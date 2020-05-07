@@ -24,6 +24,7 @@ namespace API
                 {
                     var context = services.GetRequiredService<DataContext>();
                     context.Database.Migrate();   //this applies any pending migrations to db and will create db if it doesnt exist
+                    Seeds.ActivitesList(context);
                 }
                 catch (Exception e)
                 {

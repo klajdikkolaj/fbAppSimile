@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
-import {List, Header, Icon} from 'semantic-ui-react'
+import {Header,Icon,List} from 'semantic-ui-react'
         
         
         
@@ -12,7 +11,7 @@ class App extends Component{
     value :[]
   }
   componentDidMount(): void {
-    axios.get('localhost:5000/api/values')
+    axios.get('http://localhost:5000/api/values')
         .then((response)=>{
           this.setState({
             value:response.data
