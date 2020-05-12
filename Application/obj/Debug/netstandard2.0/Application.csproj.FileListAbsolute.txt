@@ -1,0 +1,13 @@
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Application.deps.json
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Application.dll
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Application.pdb
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Domain.dll
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Persistence.dll
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Domain.pdb
+/Users/klajdikolaj/reactiviinesclone/Application/bin/Debug/netstandard2.0/Persistence.pdb
+/Users/klajdikolaj/reactiviinesclone/Application/obj/Debug/netstandard2.0/Application.csprojAssemblyReference.cache
+/Users/klajdikolaj/reactiviinesclone/Application/obj/Debug/netstandard2.0/Application.AssemblyInfoInputs.cache
+/Users/klajdikolaj/reactiviinesclone/Application/obj/Debug/netstandard2.0/Application.AssemblyInfo.cs
+/Users/klajdikolaj/reactiviinesclone/Application/obj/Debug/netstandard2.0/Application.csproj.CopyComplete
+/Users/klajdikolaj/reactiviinesclone/Application/obj/Debug/netstandard2.0/Application.dll
+/Users/klajdikolaj/reactiviinesclone/Application/obj/Debug/netstandard2.0/Application.pdb

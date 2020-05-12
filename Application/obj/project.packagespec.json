@@ -1,0 +1,62 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj",
+    "projectName": "Application",
+    "projectPath": "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj",
+    "outputPath": "/Users/klajdikolaj/reactiviinesclone/Application/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netstandard2.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "projectReferences": {
+          "/Users/klajdikolaj/reactiviinesclone/Domain/Domain.csproj": {
+            "projectPath": "/Users/klajdikolaj/reactiviinesclone/Domain/Domain.csproj"
+          },
+          "/Users/klajdikolaj/reactiviinesclone/Persistence/Persistence.csproj": {
+            "projectPath": "/Users/klajdikolaj/reactiviinesclone/Persistence/Persistence.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netstandard2.1": {
+      "dependencies": {
+        "MediatR.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[8.0.0, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "NETStandard.Library": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+    }
+  }
+}
