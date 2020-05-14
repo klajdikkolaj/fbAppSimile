@@ -9,7 +9,7 @@ interface IProps {
     setSelectedActivity: (IActivity:null)=>void
 }
 
-const ActivityDetails:React.FC<IProps> = ({activities, activity,setEditMode}) => {
+const ActivityDetails:React.FC<IProps> = ({activities, activity,setEditMode, setSelectedActivity}) => {
     return (
         <Card>
             <Image src ={`/assets/categoryImages/${activity.category}.jpg`} wrapped ui={false} />
@@ -25,7 +25,7 @@ const ActivityDetails:React.FC<IProps> = ({activities, activity,setEditMode}) =>
             <Card.Content extra>
                 <Button.Group divided widths={2}>
                     <Button basic={true} color={'blue'} content="Edit" onClick={()=>setEditMode(true)}></Button>
-                    <Button basic={true} color='grey' content="Cancel"></Button>
+                    <Button basic={true} color='grey' content="Cancel" onClick={() =>setSelectedActivity(null)}></Button>
                 </Button.Group>
                 
             </Card.Content>
