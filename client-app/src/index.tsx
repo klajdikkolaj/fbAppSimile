@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './app/layout/styles.css';
 import App from './app/layout/App';
+import {BrowserRouter} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
+import ScrollOnTop from './app/layout/ScrollOnTop'
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <BrowserRouter>
+        <ScrollOnTop/>
+        <App/>
+    </BrowserRouter>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

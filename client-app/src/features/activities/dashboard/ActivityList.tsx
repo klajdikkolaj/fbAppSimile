@@ -1,20 +1,18 @@
-import React, { SyntheticEvent } from 'react';
-import {Item, Image, Button, Label, Segment} from 'semantic-ui-react';
-import { IActivity } from '../../../app/models/activity';
+import React, {  useContext } from 'react';
+import {Item, Button, Label, Segment} from 'semantic-ui-react';
+import ActivityStore from '../../../app/stores/activityStore'
+import { observer } from 'mobx-react-lite';
+import { Link } from 'react-router-dom';
 
-interface IProps {
-    activities: IActivity[]
-    theActivity: (id:string)=>void
-    deleteActivity:(event: SyntheticEvent<HTMLButtonElement>,id:string) =>void
-    submitter:boolean,
-    target:string
-}
 
-const ActivityList: React.FC<IProps> = ({activities, theActivity, deleteActivity,submitter,target}) => {
+
+const ActivityList: React.FC = () => {
+    const activityStore = useContext(ActivityStore);
+    const {activitiesByDate, deleteActivity,submitting, target} = activityStore
     return (
         <Segment clearing={true}>
-        <Item.Group divided={true}>
-            {activities.map(activity =>
+        <Item.Group divided>
+            {activitiesByDate.map(activity =>
                 <Item key={activity.id}>
                     <Item.Content >
                         <Item.Header as='a'>{activity.title}</Item.Header>
@@ -24,8 +22,18 @@ const ActivityList: React.FC<IProps> = ({activities, theActivity, deleteActivity
                             <div>{activity.city},{activity.venue}</div>
                         </Item.Description>
                         <Item.Extra>
-                             <Button floated={'right'} content={'View'} color={'blue'} onClick={() =>theActivity(activity.id)} />
-                            <Button floated={'right'} name = {activity.id} content={'Delete'} color={'red'} onClick={(e) =>deleteActivity(e,activity.id)} loading={target===activity.id && submitter}/>
+                             <Button floated={'right'}
+                                     content={'View'}
+                                     color={'blue'}
+                                     as={Link}
+                                     to={`/activities/${activity.id}`}
+                             />
+                            <Button 
+                                floated={'right'} 
+                                    name = {activity.id}
+                                    content={'Delete'} 
+                                    color={'red'} onClick={(e) =>deleteActivity(e,activity.id)} 
+                                    loading={target===activity.id && submitting}/>
                              <Label basic content={activity.category}/>
                         </Item.Extra>
                     </Item.Content>
@@ -37,4 +45,4 @@ const ActivityList: React.FC<IProps> = ({activities, theActivity, deleteActivity
     );
 };
 
-export default ActivityList;
+export default observer(ActivityList);
