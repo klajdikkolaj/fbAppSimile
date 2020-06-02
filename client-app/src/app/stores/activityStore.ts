@@ -55,9 +55,9 @@ class ActivityStore {
             this.activity = activity;
         } else {
             this.loadingInitial = true;
-            activity = await agent.Activities.details(id);
 
             try {
+                activity = await agent.Activities.details(id);
                 runInAction('loading activity', () => {
                     this.activity = activity
                     this.loadingInitial = false

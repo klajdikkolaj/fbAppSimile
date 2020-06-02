@@ -1,6 +1,9 @@
 using System;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.errors;
+using FluentValidation;
 using MediatR;
 using Persistence;
 
@@ -21,6 +24,19 @@ namespace Application
 
 
         }
+        
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+            {
+                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Title).NotEmpty();
+            }
+        }
 
         public class Handler : IRequestHandler<Command>
         {
@@ -34,7 +50,7 @@ namespace Application
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
                 var activity = await  _context.Activities.FindAsync(request.Id);
-                if(activity ==null) throw new Exception("didnt find activity");
+                if(activity ==null) throw new RestExceptions(HttpStatusCode.NotFound,new {activity="didn't find activity"});
 
                 activity.Title = request.Title ?? activity.Title;
                 activity.Description = request.Description ?? activity.Description;

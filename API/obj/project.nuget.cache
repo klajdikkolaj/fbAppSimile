@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/2q/RhqA097HBxrPYpnpm3HVrvHxR+6hbUACvVUWQE/b4kDiJRtAaaE/fyPA7VLyvrSL4v4nq2QojQfaXY9oyw==",
+  "dgSpecHash": "a8YGWR/JKRw4RpiQeYUhXJpI80DfScR1Evm/9VLopviVkMsNHrf0HYEdRQ1xKN7yX+baHOWVpHsurcwqd3x0NA==",
   "success": true,
   "projectFilePath": "/Users/klajdikolaj/reactiviinesclone/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/klajdikolaj/.nuget/packages/fluentvalidation/8.6.2/fluentvalidation.8.6.2.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/fluentvalidation.aspnetcore/8.6.2/fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/fluentvalidation.dependencyinjectionextensions/8.6.2/fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/mediatr/8.0.0/mediatr.8.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/8.0.0/mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.csharp/4.6.0/microsoft.csharp.4.6.0.nupkg.sha512",
