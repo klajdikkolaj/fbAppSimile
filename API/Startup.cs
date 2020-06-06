@@ -1,14 +1,20 @@
 using API.Middlewares;
 using Application;
+using Domain;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Internal;
 using Persistence;
+using ISystemClock = Microsoft.AspNetCore.Authentication.ISystemClock;
+using SystemClock = Microsoft.AspNetCore.Authentication.SystemClock;
 
 namespace API
 {
@@ -24,10 +30,17 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddFluentValidation(cfg =>
+            services.AddControllers()
+                .AddFluentValidation(cfg =>
             {
                 cfg.RegisterValidatorsFromAssemblyContaining<Create>();
             });
+            var builder = services.AddIdentityCore<AppUser>();
+            var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
+            identityBuilder.AddEntityFrameworkStores<DataContext>();
+            identityBuilder.AddSignInManager<SignInManager<AppUser>>();
+            services.TryAddSingleton<ISystemClock,SystemClock>();
+                        
             services.AddDbContext<DataContext>(opt =>
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddCors(options =>

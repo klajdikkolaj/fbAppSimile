@@ -23,6 +23,7 @@ axios.interceptors.response.use(undefined, error => {
     if(status === 400 && config.method ==="get" && data.errors.hasOwnProperty('id')){
         history.push('/notfound')
     }
+    throw error;
 })
 
 const responseBody = (response: AxiosResponse) => response.data;

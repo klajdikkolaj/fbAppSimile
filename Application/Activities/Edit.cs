@@ -7,34 +7,31 @@ using FluentValidation;
 using MediatR;
 using Persistence;
 
-namespace Application
+namespace Application.Activities
 {
     public class Edit
     {
-
         public class Command : IRequest
         {
-            public Guid Id { get; set; }     //guid because has higher protection
+            public Guid Id { get; set; } //guid because has higher protection
             public string Title { get; set; }
             public string Description { get; set; }
             public string Category { get; set; }
             public DateTime? Date { get; set; }
             public string City { get; set; }
             public string Venue { get; set; }
-
-
         }
-        
+
         public class CommandValidator : AbstractValidator<Command>
         {
             public CommandValidator()
             {
                 RuleFor(x => x.Title).NotEmpty();
-                RuleFor(x => x.Title).NotEmpty();
-                RuleFor(x => x.Title).NotEmpty();
-                RuleFor(x => x.Title).NotEmpty();
-                RuleFor(x => x.Title).NotEmpty();
-                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Description).NotEmpty();
+                RuleFor(x => x.Date).NotEmpty();
+                RuleFor(x => x.Category).NotEmpty();
+                RuleFor(x => x.City).NotEmpty();
+                RuleFor(x => x.Venue).NotEmpty();
             }
         }
 
@@ -49,8 +46,9 @@ namespace Application
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
-                var activity = await  _context.Activities.FindAsync(request.Id);
-                if(activity ==null) throw new RestExceptions(HttpStatusCode.NotFound,new {activity="didn't find activity"});
+                var activity = await _context.Activities.FindAsync(request.Id);
+                if (activity == null)
+                    throw new RestExceptions(HttpStatusCode.NotFound, new {activity = "didn't find activity"});
 
                 activity.Title = request.Title ?? activity.Title;
                 activity.Description = request.Description ?? activity.Description;
@@ -58,7 +56,7 @@ namespace Application
                 activity.Date = request.Date ?? activity.Date;
                 activity.City = request.City ?? activity.City;
                 activity.Venue = request.Venue ?? activity.Venue;
-                
+
                 _context.Activities.Update(activity);
 
                 var success = await _context.SaveChangesAsync() > 0;
@@ -70,4 +68,3 @@ namespace Application
         }
     }
 }
-    

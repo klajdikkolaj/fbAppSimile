@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SvNlBlAjP1O/RTSuTZN56jrM4bw6mfYggKuZrFUCxCbd2q62T3gGoDxaB1ORUh289ldkfREZDsiFfkSOfhrZ4g==",
+  "dgSpecHash": "HzmfulM0wKIGi7+4Yat6qCfMARAjZoEnwgRKwNq5C9cF7HaLIA/Do2HF3kF3+nVFr5/PVkoo6lAEajnSuE/IMw==",
   "success": true,
   "projectFilePath": "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "/Users/klajdikolaj/.nuget/packages/fluentvalidation.dependencyinjectionextensions/8.6.2/fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/mediatr/8.0.0/mediatr.8.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/8.0.0/mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.0.0/microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.0.0/microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/3.0.0/microsoft.aspnetcore.identity.entityframeworkcore.3.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.data.sqlite.core/3.0.1/microsoft.data.sqlite.core.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.dotnet.platformabstractions/3.0.1/microsoft.dotnet.platformabstractions.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.entityframeworkcore/3.0.1/microsoft.entityframeworkcore.3.0.1.nupkg.sha512",
@@ -25,6 +28,8 @@
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.dependencyinjection/3.0.1/microsoft.extensions.dependencyinjection.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.0.1/microsoft.extensions.dependencyinjection.abstractions.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.dependencymodel/3.0.1/microsoft.extensions.dependencymodel.3.0.1.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.identity.core/3.0.0/microsoft.extensions.identity.core.3.0.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.identity.stores/3.0.0/microsoft.extensions.identity.stores.3.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.logging/3.0.1/microsoft.extensions.logging.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.logging.abstractions/3.0.1/microsoft.extensions.logging.abstractions.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.options/3.0.1/microsoft.extensions.options.3.0.1.nupkg.sha512",

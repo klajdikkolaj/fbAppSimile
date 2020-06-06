@@ -1,8 +1,8 @@
 import React, { useContext, FC, useEffect } from 'react';
-import { Card, Image, Button, GridColumn, Grid } from 'semantic-ui-react';
+import { GridColumn, Grid } from 'semantic-ui-react';
 import ActivityStore from '../../../app/stores/activityStore'
 import { observer } from 'mobx-react-lite';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import LoadingComponent from "../../../app/layout/LoadingComponent";
 import ActivityDetailedHeader from './ActivityDetailedHeader';
 import ActivityDetailedInfo from './ActivityDetailedInfo';
