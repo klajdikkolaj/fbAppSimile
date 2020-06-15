@@ -30,6 +30,9 @@
             "projectReferences": {
               "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj": {
                 "projectPath": "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj"
+              },
+              "/Users/klajdikolaj/reactiviinesclone/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/Users/klajdikolaj/reactiviinesclone/Infrastructure/Infrastructure.csproj"
               }
             }
           }
@@ -43,6 +46,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[3.0.0, )"
@@ -182,6 +189,69 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/klajdikolaj/reactiviinesclone/Infrastructure/Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/klajdikolaj/reactiviinesclone/Infrastructure/Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "/Users/klajdikolaj/reactiviinesclone/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/Users/klajdikolaj/.nuget/packages/",
+        "outputPath": "/Users/klajdikolaj/reactiviinesclone/Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/klajdikolaj/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj": {
+                "projectPath": "/Users/klajdikolaj/reactiviinesclone/Application/Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             }
           },
           "imports": [

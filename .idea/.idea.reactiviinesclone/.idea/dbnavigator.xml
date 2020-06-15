@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="282b53a3-b4c0-488d-97f0-afbcb6b39463">
-        <schema name="main" object-types="view, table" />
+        <schema name="main" object-types="view, dataset trigger, constraint, index, column, table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -41,6 +41,9 @@
     <connection id="282b53a3-b4c0-488d-97f0-afbcb6b39463" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="282b53a3-b4c0-488d-97f0-afbcb6b39463" dataset="main.AspNetUsers" active-filter-id="373460c5-0af7-4a11-bd4b-c186f88bd22f">
+      <filter id="373460c5-0af7-4a11-bd4b-c186f88bd22f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
     <filter-actions connection-id="282b53a3-b4c0-488d-97f0-afbcb6b39463" dataset="main.Values" active-filter-id="" />
     <filter-actions connection-id="282b53a3-b4c0-488d-97f0-afbcb6b39463" dataset="main.Activities" active-filter-id="EMPTY_FILTER" />
   </component>

@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,9 +24,11 @@ namespace API
                 var services = scope.ServiceProvider;
                 try
                 {
+                    var userManager = services.GetRequiredService<UserManager<AppUser>>();
                     var context = services.GetRequiredService<DataContext>();
-                    context.Database.Migrate();   //this applies any pending migrations to db and will create db if it doesnt exist
-                    Seeds.ActivitesList(context);
+                    context.Database
+                        .Migrate(); //this applies any pending migrations to db and will create db if it doesnt exist
+                    Seeds.ActivitesList(context, userManager).Wait();
                 }
                 catch (Exception e)
                 {
@@ -34,14 +38,10 @@ namespace API
             }
 
             host.Run();
-            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }

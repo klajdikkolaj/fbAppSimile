@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "194PL5ERyJVIfTpzk8YhCRACuqFePvm+KobXYl/A4UtfX/w1xPRXW+Z9QhdU2X3YZrFRv2/+6nljm2cIj3UQ+w==",
+  "dgSpecHash": "43a+/sg9aUIk/un03t2TqcY+E+lmSseC8qsrJIqc4FSoYoE54nxPO5yGiXYAocJdvXvCg6i2w41taOIQsPufEw==",
   "success": true,
   "projectFilePath": "/Users/klajdikolaj/reactiviinesclone/API/API.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/klajdikolaj/.nuget/packages/fluentvalidation.dependencyinjectionextensions/8.6.2/fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/mediatr/8.0.0/mediatr.8.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/8.0.0/mediatr.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.0.0/microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.0.0/microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.0.0/microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/3.0.0/microsoft.aspnetcore.identity.entityframeworkcore.3.0.0.nupkg.sha512",
@@ -39,6 +40,11 @@
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.logging.abstractions/3.0.1/microsoft.extensions.logging.abstractions.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.options/3.0.1/microsoft.extensions.options.3.0.1.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/microsoft.extensions.primitives/3.0.1/microsoft.extensions.primitives.3.0.1.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.6.0/microsoft.identitymodel.jsonwebtokens.6.6.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.identitymodel.logging/6.6.0/microsoft.identitymodel.logging.6.6.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.identitymodel.protocols/5.5.0/microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/5.5.0/microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/microsoft.identitymodel.tokens/6.6.0/microsoft.identitymodel.tokens.6.6.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.0/sqlitepclraw.bundle_e_sqlite3.2.0.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/sqlitepclraw.core/2.0.0/sqlitepclraw.core.2.0.0.nupkg.sha512",
@@ -47,7 +53,9 @@
     "/Users/klajdikolaj/.nuget/packages/system.collections.immutable/1.6.0/system.collections.immutable.1.6.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/system.componentmodel.annotations/4.6.0/system.componentmodel.annotations.4.6.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/system.diagnostics.diagnosticsource/4.6.0/system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/system.identitymodel.tokens.jwt/6.6.0/system.identitymodel.tokens.jwt.6.6.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/klajdikolaj/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/system.text.json/4.6.0/system.text.json.4.6.0.nupkg.sha512",
     "/Users/klajdikolaj/.nuget/packages/system.threading.tasks.extensions/4.5.2/system.threading.tasks.extensions.4.5.2.nupkg.sha512"
   ],
