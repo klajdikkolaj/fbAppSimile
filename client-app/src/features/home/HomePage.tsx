@@ -18,6 +18,10 @@ const HomePage = () => {
                 <Button as={Link} to='/activities' size='huge' inverted>
                     Take me to the activities!
                 </Button>
+                <Header as='h2' inverted content='Welcome to Reactivities' />
+                <Button as={Link} to='/activities' size='huge' inverted>
+                    Take me to the activities!
+                </Button>
             </Container>
         </Segment>
 

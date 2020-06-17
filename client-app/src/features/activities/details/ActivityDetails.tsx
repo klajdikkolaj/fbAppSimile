@@ -8,6 +8,7 @@ import ActivityDetailedHeader from './ActivityDetailedHeader';
 import ActivityDetailedInfo from './ActivityDetailedInfo';
 import ActivityDetailedChat from './ActivityDetailedChat'
 import ActivityDetailedSideBar from './ActivityDetailedChat'
+import { RootStoreContext } from '../../../app/stores/rootStore';
 
 interface DetailParams {
     id: string
@@ -15,15 +16,14 @@ interface DetailParams {
 
 
 const ActivityDetails: FC<RouteComponentProps<DetailParams>> = ({match, history}) => {
-    const activityStore = useContext(ActivityStore)
-    const {activity, loadingInitial, loadActivity} = activityStore
-
+    const rootStore = useContext(RootStoreContext)
+    const {activity, loadingInitial, loadActivity} = rootStore.activityStore
 
     useEffect(() => {
         loadActivity(match.params.id)
-            // .catch(() => {
-            // history.push('/notfound')
-        
+        // .catch(() => {
+        // history.push('/notfound')
+
     }, [loadActivity, match.params.id, history]);
 
     if (loadingInitial) return <LoadingComponent content={("still loading activity")}/>
