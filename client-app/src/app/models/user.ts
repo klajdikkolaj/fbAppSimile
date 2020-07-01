@@ -1,12 +1,12 @@
 export interface IUser {
-    diplayName: string;
+    displayName: string;
     username: string;
     token: string;
     image?: null;
 }
 
 export interface IUserFormValues {
-    diplayName: string;
+    displayName: string;
     email: string;
     password: string;
     username: string;

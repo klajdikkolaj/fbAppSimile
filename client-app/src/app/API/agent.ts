@@ -6,6 +6,13 @@ import { IUser, IUserFormValues } from '../models/user';
 
 axios.defaults.baseURL = 'http://localhost:5000/api'
 
+axios.interceptors.request.use((config)=>{
+    const token = window.localStorage.getItem('jwt');
+    if(token) config.headers.authorization = `Bearer ${token}`;
+    return config;
+},error => {
+    Promise.reject(error);
+})
 
 axios.interceptors.response.use(undefined, error => {
    
@@ -24,7 +31,7 @@ axios.interceptors.response.use(undefined, error => {
     if(status === 400 && config.method ==="get" && data.errors.hasOwnProperty('id')){
         history.push('/notfound')
     }
-    throw error;
+    throw error.response;
 })
 
 const responseBody = (response: AxiosResponse) => response.data;
